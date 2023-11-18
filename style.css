@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+
+:root {
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    /* --primaryColor: #4338CA;
+    --secondaryColor: #E0E7FF; */
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    font-family: "Lato", sans-serif;
+    background-color: var(--bodyColor);
+    position: relative;
+  }
+  
+
+  /* -------------header------------- */
+  .header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    width: 100%;
+    height: 190px;
+    justify-content: space-around;
+    z-index: 10;
+    padding-bottom: 2rem;
+    gap: 20px;
+    padding-top: 20px;
+
+  }
+
+
+  #search {
+    border :none;
+    outline: none;
+    padding: 10px 20px ;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 20rem;
+  }
+
+  #search:focus{
+    border: 2px solid var(--primaryColor);
+  }
+
+
+  .filter-box {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+
+  }
+
+
+  @media only screen and (max-width: 600px){
+    .filter-box {
+        justify-content: space-between;
+        width: 90%;
+    }
+  }
+
+  .filter-box a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid var(--primaryColor);
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: var(--primaryColor);
+  }
+
+  .filter-box a:hover{
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+    transition: all 0.3s ease-in-out;
+  }
+
+/* ------------------------product--------------------------- */
+
+.products {
+    padding: 4rem 0;
+  }
+
+  .product-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 5rem;
+  }
+
+.product {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mainWhite);
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.product-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.product-price {
+    color: var(--primaryColor);
+}
+
